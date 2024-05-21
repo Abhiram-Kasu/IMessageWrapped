@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="IMessageWrapped/App.axaml" value="IMessageWrapped/IMessageWrapped.csproj" />
+        <entry key="IMessageWrapped/Views/DBSelectorView.axaml" value="IMessageWrapped/IMessageWrapped.csproj" />
+        <entry key="IMessageWrapped/Views/MainWindow.axaml" value="IMessageWrapped/IMessageWrapped.csproj" />
+        <entry key="IMessageWrapped/Views/ResultsView.axaml" value="IMessageWrapped/IMessageWrapped.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

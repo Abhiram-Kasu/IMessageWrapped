@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:IMessageWrapped.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:DBSelectorViewModel"
+             x:Class="IMessageWrapped.Views.DBSelectorView">
+    <Design.DataContext>
+        <viewModels:DBSelectorViewModel />
+    </Design.DataContext>
+
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Command="{Binding SelectDbFileCommand}" Content="{Binding ButtonText}" />
+        <Border HorizontalAlignment="Center" IsVisible="{Binding Error}" IsEnabled="{Binding Error}" CornerRadius="10"
+                Background="Red" Margin="10"
+                Padding="10">
+
+            <TextBlock TextAlignment="Center" Text="{Binding ErrorMessage}" />
+        </Border>
+    </StackPanel>
+</UserControl>

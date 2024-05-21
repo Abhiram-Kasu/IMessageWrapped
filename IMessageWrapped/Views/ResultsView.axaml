@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:IMessageWrapped.ViewModels"
+             xmlns:models="clr-namespace:IMessageWrapped.Models"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:ResultsViewModel"
+             x:Class="IMessageWrapped.Views.ResultsView">
+    <Design.DataContext>
+        <vm:ResultsViewModel />
+    </Design.DataContext>
+    <UserControl.Resources>
+        <DataTemplate x:DataType="models:QueryResult" x:Key="QueryResultTemplate">
+            <Border CornerRadius="10" Padding="10" Margin="10">
+                <Grid RowDefinitions="Auto, *">
+                    <Label FontSize="30" FontWeight="Bold" Content="{Binding Title}" />
+                    <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="{Binding Result}" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <ListBox ItemsSource="{Binding QueryResults}" ItemTemplate="{StaticResource QueryResultTemplate}" />
+</UserControl>
